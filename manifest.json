@@ -1,0 +1,25 @@
+{
+    "name": "Distraction Free Browsing",
+    "version": "1.0",
+    "description": "Block webcontent you don't want to se",
+    "manifest_version": 2,
+    "icons":{
+        "128":"map-icons_3-0-0_fish-cleaning_128_128_318ff1_none.png",
+        "48":"map-icons_3-0-0_fish-cleaning_48_48_318ff1_none.png",
+        "16":"map-icons_3-0-0_fish-cleaning_16_16_318ff1_none.png"
+        },
+        "browser_action":{
+            "default_icon":"map-icons_3-0-0_fish-cleaning_128_128_318ff1_none.png",
+            "default_popup":"popup.html"
+        },
+        "content_scripts":[
+            {
+              "matches": ["https://twitter.com/*","https://m.twitter.com/*"],
+              "js": ["script.js"]
+            }
+          ],
+                  "permissions": [  
+            "tabs",      
+            "contextMenus"
+          ]
+  }
